@@ -26,7 +26,7 @@ class Window(Frame):
         
         
    
-        Button(self.master, text = "submit FAGGOT ", command= pull_code).grid(row=2, column=1)
+        Button(self.master, text = "submit coupon ", command= pull_code).grid(row=2, column=1)
 
        # canvas1.create_window(200, 140, window=entry1)
 
