@@ -28,11 +28,11 @@ class Window(Frame):
         zipCodeInput = Entry(self.master)
 
         def test():
-            print(cardNumInput.get())
-            print(expDateInput.get())
-            print(cvvInput.get())
-            print(zipCodeInput.get())
-            
+            cardNum = cardNumInput.get()
+            expDate = expDateInput.get()
+            cvv = cvvInput.get()
+            zipCode = zipCodeInput.get()
+ 
 
         #populating the grid
         cardNumInput.grid(row = 0, column = 1)
