@@ -18,10 +18,15 @@ class Window(Frame):
         Label(self.master, text = "ZIP: ").grid(row=4)
 
         def callBack():
-            print(address.get())
-            print(city.get())
-            print(state.get())
-            print(zipcode.get())
+            storedAddress = (address.get())
+            print(storedAddress)
+            storedCity = (city.get())
+            print(storedCity)
+            storedState = (state.get())
+            print(storedState)
+            storedZip = (zipcode.get())
+            print(storedZip)
+         
        
         nextEnter= Entry(root)
         nextEnter = Button(root, text = "Next", command = callBack)
