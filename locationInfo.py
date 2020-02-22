@@ -17,6 +17,21 @@ class Window(Frame):
         Label(self.master, text = "State: ").grid(row=3)
         Label(self.master, text = "ZIP: ").grid(row=4)
 
+        def callBack():
+            print(address.get())
+            print(city.get())
+            print(state.get())
+            print(zipcode.get())
+       
+        nextEnter= Entry(root)
+        nextEnter = Button(root, text = "Next", command = callBack)
+        nextEnter.grid(row = 5, column = 2)
+        
+         
+        address = Entry(self.master)
+        city = Entry(self.master)
+        state = Entry(self.master)
+        zipcode = Entry(self.master)
         
         address = Entry(self.master)
         city = Entry(self.master)
