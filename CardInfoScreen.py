@@ -9,7 +9,7 @@ class Window(Frame):
 
     def init_window(self):
         Label(self.master, text = "Card Number: ").grid(row = 0)
-        Label(self.master, text = "Expiration Date: ").grid(row = 1)
+        Label(self.master, text = "Expiration Date (mmyy): ").grid(row = 1)
         Label(self.master, text = "CVV: ").grid(row = 2)
         Label(self.master, text = "Zip Code: ").grid(row = 3)
         cardNum = Entry(self.master)
@@ -20,8 +20,6 @@ class Window(Frame):
         expDate.grid(row = 1, column = 1)
         cvv.grid(row = 2, column = 1)
         zipCode.grid(row = 3, column = 1)
-
-
 
 
 root = Tk()
