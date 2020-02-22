@@ -32,6 +32,7 @@ class Window(Frame):
             print(expDateInput.get())
             print(cvvInput.get())
             print(zipCodeInput.get())
+            
 
         #populating the grid
         cardNumInput.grid(row = 0, column = 1)
@@ -45,3 +46,4 @@ root = Tk(screenName = "Card Info")
 root.geometry("800x600")
 app = Window(root)
 root.mainloop()
+
