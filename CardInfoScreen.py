@@ -32,6 +32,8 @@ class Window(Frame):
         cvv.grid(row = 2, column = 1)
         zipCode.grid(row = 3, column = 1)
 
+    def nextAndEnter():
+        
 
 
 
