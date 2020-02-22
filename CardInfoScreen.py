@@ -42,7 +42,7 @@ class Window(Frame):
         enter = Button(root, text = "Enter", command = test)
         enter.grid(row = 4, column = 1)
 
-root = Tk(screenName = "Card Info")
+root = Tk()
 root.geometry("800x600")
 app = Window(root)
 root.mainloop()
