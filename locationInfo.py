@@ -9,7 +9,8 @@ class Window(Frame):
     def init_window(self):
 
         #title of master widget
-        self.master.title("GUI")
+        self.master.title("Information Page")
+        
 
         Label(self.master, text = "Enter Location").grid(row=0)
         Label(self.master, text = "Address: ").grid(row=1)
@@ -17,6 +18,17 @@ class Window(Frame):
         Label(self.master, text = "State: ").grid(row=3)
         Label(self.master, text = "ZIP: ").grid(row=4)
 
+        address = Entry(self.master)
+        city = Entry(self.master)
+        state = Entry(self.master)
+        zipcode = Entry(self.master)
+
+        
+        address.grid(row = 1, column = 1)
+        city.grid(row = 2, column = 1)
+        state.grid(row = 3, column = 1)
+        zipcode.grid(row = 4, column = 1)
+        
         def callBack():
             storedAddress = (address.get())
             print(storedAddress)
@@ -32,25 +44,10 @@ class Window(Frame):
         nextEnter = Button(root, text = "Next", command = callBack)
         nextEnter.grid(row = 5, column = 2)
         
+        
          
-        address = Entry(self.master)
-        city = Entry(self.master)
-        state = Entry(self.master)
-        zipcode = Entry(self.master)
-        
-        address = Entry(self.master)
-        city = Entry(self.master)
-        state = Entry(self.master)
-        zipcode = Entry(self.master)
+       
 
-        
-        address.grid(row = 1, column = 1)
-        city.grid(row = 2, column = 1)
-        state.grid(row = 3, column = 1)
-        zipcode.grid(row = 4, column = 1)
-
-        root.geometry("800x600")
-        
 root = Tk()
 
 
