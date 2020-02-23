@@ -1,30 +1,49 @@
+
+import tkinter as tk
 from tkinter import *
 
-class Window(Frame):
+import Page
 
-    def __init__(self, master=None):
-        Frame.__init__(self, master)               
-        self.master = master
-        self.init_window()
-
-    def init_window(self):
-        Label(self.master, text = "Card Number: ").grid(row = 0)
-        Label(self.master, text = "Expiration Date: ").grid(row = 1)
-        Label(self.master, text = "CVV: ").grid(row = 2)
-        Label(self.master, text = "Zip Code: ").grid(row = 3)
-        cardNum = Entry(self.master)
-        expDate = Entry(self.master)
-        cvv = Entry(self.master)
-        zipCode = Entry(self.master)
-        cardNum.grid(row = 0, column = 1)
-        expDate.grid(row = 1, column = 1)
-        cvv.grid(row = 2, column = 1)
-        zipCode.grid(row = 3, column = 1)
+class CardInfoScreenClass(Page.PageClass):
+    def __init__(self,*args,**kwargs):
+        Page.PageClass.__init__(self,*args, **kwargs)
 
 
 
+        # Label(text ="ENTER INFO ").grid(row=0)
+        # Label(text ="First name: ").grid(row=1)
+        # Label(text ="Last name: ").grid(row=2)
+        # Label(text ="Email address: ").grid(row=3)
+        # Label(text ="Phone number: ").grid(row=4)
+        # fName = Entry()
+        # lName = Entry()
+        # emailAddress = Entry()
+        # phoneNum = Entry()
+        # nextButton = Button( text="next")
+                        
+        # fName.grid(row=1, column=1)
+        # lName.grid(row=2, column=1)
+        # emailAddress.grid(row=3, column=1)
+        # phoneNum.grid(row=4, column=1)
+        # nextButton.grid(row=5,column =1)
 
-root = Tk()
-root.geometry("800x600")
-app = Window(root)
-root.mainloop()
+
+
+        Label( text = "Card Number: ").pack()
+        Label( text = "Expiration Date: ").pack()
+        Label( text = "CVV: ").pack()
+        Label( text = "Zip Code: ").pack()
+        cardNum = Entry()
+        expDate = Entry()
+        cvv = Entry()
+        zipCode = Entry()
+        cardNum.pack()
+        expDate.pack()
+        cvv.pack()
+        zipCode.pack()
+
+        
+
+
+
+
