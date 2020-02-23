@@ -75,6 +75,10 @@ class Window(Frame):
         cvv.grid(row = 10, column = 1)
         zipCode.grid(row = 11, column = 1)
 
+        Label(self.master, text = "Order seperated by comma ").grid(row = 12)
+        orderCombo = Entry(self.master)
+        orderCombo.grid(row = 12, column = 1)
+
 
 
         #all in one button ordering 2 liter soda
@@ -98,6 +102,9 @@ class Window(Frame):
             stateText = state.get()
             zipCodeHomeText = zipCodeHome.get()
 
+            #
+
+
 
 
 
@@ -114,8 +121,16 @@ class Window(Frame):
             store = destination.closest_store()
             order = Order(store,customer,destination)
 
+            orderComboText = orderCombo.get()
+            result = [x.strip() for x in orderComboText.split(',')]
+
+
+            for i in  result:
+                order.add_item(i)
+
+            print(result)
             #adding orders
-            order.add_item("D2LBCCKE")
+
 
             #mock paying for order
             order.pay_with(card)
@@ -126,7 +141,7 @@ class Window(Frame):
         #button attached to function
         saveUserButton = Button(self.master, text = "Order" ,command = saveUser)
 
-        saveUserButton.grid(row = 12, column = 1)
+        saveUserButton.grid(row = 13, column = 1)
 
 
 
@@ -138,6 +153,6 @@ class Window(Frame):
 
 
 root = Tk()
-root.geometry("300x800")
+root.geometry("400x800")
 app = Window(root)
 root.mainloop()
