@@ -10,11 +10,15 @@ class Window(Frame):
 
     def init_window(self):
 
+        #Labels for Customer Info
+
         Label(self.master, text = "First name: ").grid(row = 0)
         Label(self.master, text = "Last name: ").grid(row = 1)
         Label(self.master, text = "Email: ").grid(row = 2)
         Label(self.master, text = "Phone number: ").grid(row = 3)
-        
+
+        #input fields for Customer Info
+
         fName = Entry(self.master)
         lName = Entry(self.master)
         email = Entry(self.master)
@@ -24,13 +28,13 @@ class Window(Frame):
         email.grid(row = 2, column = 1)
         phoneNum.grid(row = 3, column = 1)
         
-        
+        #location labels
         Label(self.master, text = "Address: ").grid(row = 4)
         Label(self.master, text = "City: ").grid(row = 5)
         Label(self.master, text = "State: ").grid(row = 6)
         Label(self.master, text = "Zip Code: ").grid(row = 7)
         
-        
+        #location fields
         address = Entry(self.master)
         city = Entry(self.master)
         state = Entry(self.master)
@@ -40,12 +44,14 @@ class Window(Frame):
         state.grid(row = 6, column = 1)
         zipCode.grid(row = 7, column = 1)
 
-
+        #card Num labels
         Label(self.master, text = "Card Number: ").grid(row = 8)
         Label(self.master, text = "Expiration Date: ").grid(row = 9)
         Label(self.master, text = "CVV: ").grid(row = 10)
         Label(self.master, text = "Zip Code on card: ").grid(row = 11)
         
+        #card num fields
+
         cardNum = Entry(self.master)
         expDate = Entry(self.master)
         cvv = Entry(self.master)
