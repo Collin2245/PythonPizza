@@ -32,6 +32,7 @@ class Window(Frame):
             expDate = expDateInput.get()
             cvv = cvvInput.get()
             zipCode = zipCodeInput.get()
+            print(zipCode)
  
 
         #populating the grid
