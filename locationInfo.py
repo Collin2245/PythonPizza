@@ -10,13 +10,12 @@ class Window(Frame):
 
         #title of master widget
         self.master.title("Information Page")
-        
 
-        Label(self.master, text = "Enter Location").grid(row=0)
-        Label(self.master, text = "Address: ").grid(row=1)
-        Label(self.master, text = "City: ").grid(row=2)
-        Label(self.master, text = "State: ").grid(row=3)
-        Label(self.master, text = "ZIP: ").grid(row=4)
+        Label(self.master, text = "Enter Location", font = "Times 20").grid(row=0)
+        Label(self.master, text = "Address: ", font = "Times 20").grid(row=1)
+        Label(self.master, text = "City: ", font = "Times 20").grid(row=2)
+        Label(self.master, text = "State: ", font = "Times 20").grid(row=3)
+        Label(self.master, text = "ZIP: ", font = "Times 20").grid(row=4)
 
         address = Entry(self.master)
         city = Entry(self.master)
@@ -41,11 +40,11 @@ class Window(Frame):
          
        
         nextEnter= Entry(root)
-        nextEnter = Button(root, text = "Next", command = callBack)
+        nextEnter = Button(root, text = "Next", font = "Times 20", command = callBack)
         nextEnter.grid(row = 5, column = 2)
         
         
-         
+        root.geometry("800x600")
        
 
 root = Tk()
