@@ -9,6 +9,7 @@ class Window(Frame):
         self.init_window()
 
     def init_window(self):
+        self.master.title("Pizza Orderer")
 
         #Labels for Customer Info
 
